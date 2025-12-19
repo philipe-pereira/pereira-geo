@@ -1,7 +1,5 @@
 package br.com.pereiraeng.geo.objetos;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -9,7 +7,6 @@ import java.util.List;
 
 import br.com.pereiraeng.geo.GeoCoordinate;
 import br.com.pereiraeng.math.geometry.Polygon;
-import swingutils.interfaces.WL;
 
 /**
  * Objeto geográfico abstrato constituído pela reunião de vários segmentos
@@ -91,7 +88,6 @@ public abstract class GeoStrings extends ArrayList<List<GeoCoordinate>> implemen
 		this.get(pos).add(coordinate);
 	}
 
-	@Override
 	public Point2D.Float getMin() {
 		Point2D.Float m = new Point2D.Float(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
 		for (List<GeoCoordinate> cs : this) {
@@ -105,7 +101,6 @@ public abstract class GeoStrings extends ArrayList<List<GeoCoordinate>> implemen
 		return m;
 	}
 
-	@Override
 	public Point2D.Float getMax() {
 		Point2D.Float M = new Point2D.Float(Float.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY);
 		for (List<GeoCoordinate> cs : this) {
@@ -153,38 +148,6 @@ public abstract class GeoStrings extends ArrayList<List<GeoCoordinate>> implemen
 
 		out.append("</Placemark>\n");
 		return out.toString();
-	}
-
-	// ------------------------------- DRAWER -------------------------------
-
-	protected transient WL wl;
-
-	@Override
-	public void setWL(WL wl) {
-		this.wl = wl;
-	}
-
-	@Override
-	public void drawObject(Graphics2D g) {
-		int j = 0;
-		for (List<GeoCoordinate> cs : this)
-			GeoString.drawObject(g, cs, wl, getColor(), loops.get(j++), toString());
-	}
-
-	protected abstract Color getColor();
-
-	@Override
-	public boolean isDrawable() {
-		return true;
-	}
-
-	@Override
-	public boolean wasDrawn() {
-		return true;
-	}
-
-	@Override
-	public void setDrawable(boolean drawable) {
 	}
 
 	public boolean isLoop() {

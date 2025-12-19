@@ -1,5 +1,7 @@
 package br.com.pereiraeng.geo.objetos;
 
+import java.awt.geom.Point2D;
+
 import br.com.pereiraeng.geo.GeoCoordinate;
 
 public abstract class GeoLine implements Geo {
@@ -37,10 +39,16 @@ public abstract class GeoLine implements Geo {
 		return this.c2;
 	}
 
-	
-
 	public float getDistance() {
 		return this.c1.getDistance(this.c2);
+	}
+
+	public Point2D.Float getMin() {
+		return new Point2D.Float((float) Math.min(c1.getX(), c2.getX()), (float) Math.min(c1.getY(), c2.getY()));
+	}
+
+	public Point2D.Float getMax() {
+		return new Point2D.Float((float) Math.max(c1.getX(), c2.getX()), (float) Math.max(c1.getY(), c2.getY()));
 	}
 
 	// --------------------------------- KML ---------------------------------
@@ -62,5 +70,5 @@ public abstract class GeoLine implements Geo {
 		out.append(" ");
 		out.append("\n</coordinates>");
 		return out.toString();
-	}	
+	}
 }

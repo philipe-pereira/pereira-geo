@@ -1,5 +1,7 @@
 package br.com.pereiraeng.geo.objetos;
 
+import java.awt.geom.Point2D;
+
 import br.com.pereiraeng.geo.GeoCoordinate;
 
 /**
@@ -37,6 +39,14 @@ public abstract class GeoPoint extends GeoCoordinate implements Geo {
 	@Override
 	public String toString() {
 		return getId() + ":" + super.toString();
+	}
+
+	public Point2D.Float getMin() {
+		return this;
+	}
+
+	public Point2D.Float getMax() {
+		return this;
 	}
 
 	// --------------------------------- GEO ---------------------------------

@@ -1,6 +1,5 @@
 package br.com.pereiraeng.geo.objetos;
 
-import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
@@ -14,8 +13,7 @@ import br.com.pereiraeng.geo.GeoCoordinate;
  * 
  * @author Philipe PEREIRA
  *
- * @param <K>
- *            classe do objeto que comporá cada uma das partes deste objeto
+ * @param <K> classe do objeto que comporá cada uma das partes deste objeto
  *            geográfico
  */
 public abstract class GeoMultiString<K extends GeoString> extends ArrayList<K> implements Geo {
@@ -85,7 +83,6 @@ public abstract class GeoMultiString<K extends GeoString> extends ArrayList<K> i
 		this.id = Integer.parseInt(id.toString());
 	}
 
-	@Override
 	public Point2D.Float getMin() {
 		Point2D.Float m = new Point2D.Float(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
 		for (GeoString gs : this) {
@@ -98,7 +95,6 @@ public abstract class GeoMultiString<K extends GeoString> extends ArrayList<K> i
 		return m;
 	}
 
-	@Override
 	public Point2D.Float getMax() {
 		Point2D.Float M = new Point2D.Float(Float.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY);
 		for (GeoString gs : this) {
@@ -160,33 +156,5 @@ public abstract class GeoMultiString<K extends GeoString> extends ArrayList<K> i
 		out.append("</MultiGeometry>\n");
 
 		return out.toString();
-	}
-
-	// -------------------------------- DRAWER --------------------------------
-
-	@Override
-	public void setWL(WL wl) {
-		for (GeoString gs : this)
-			gs.setWL(wl);
-	}
-
-	@Override
-	public void drawObject(Graphics2D g) {
-		for (GeoString gs : this)
-			gs.drawObject(g);
-	}
-
-	@Override
-	public boolean isDrawable() {
-		return true;
-	}
-
-	@Override
-	public boolean wasDrawn() {
-		return true;
-	}
-
-	@Override
-	public void setDrawable(boolean drawable) {
 	}
 }

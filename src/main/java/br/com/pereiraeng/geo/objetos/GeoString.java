@@ -75,8 +75,6 @@ public abstract class GeoString extends ArrayList<GeoCoordinate> implements Geo 
 		super.add(coordinate);
 	}
 
-	
-
 	public Point2D.Float getMinX() {
 		Point2D.Float out = new Point2D.Float(Float.POSITIVE_INFINITY, 0f);
 		for (Point2D.Float p : this)
@@ -109,6 +107,30 @@ public abstract class GeoString extends ArrayList<GeoCoordinate> implements Geo 
 		return out;
 	}
 
+	public Point2D.Float getMin() {
+		Point2D.Float m = new Point2D.Float(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY);
+
+		for (GeoCoordinate mi : this) {
+			if (mi.x < m.x)
+				m.x = mi.x;
+			if (mi.y < m.y)
+				m.y = mi.y;
+		}
+
+		return m;
+	}
+
+	public Point2D.Float getMax() {
+		Point2D.Float M = new Point2D.Float(Float.NEGATIVE_INFINITY, Float.NEGATIVE_INFINITY);
+		for (GeoCoordinate mi : this) {
+			if (mi.x > M.x)
+				M.x = mi.x;
+			if (mi.y > M.y)
+				M.y = mi.y;
+		}
+		return M;
+	}
+
 	// --------------------------------- KML ---------------------------------
 
 	@Override
@@ -124,5 +146,5 @@ public abstract class GeoString extends ArrayList<GeoCoordinate> implements Geo 
 		}
 		out.append("\n</coordinates>");
 		return out.toString();
-	}	
+	}
 }

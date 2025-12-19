@@ -1,8 +1,5 @@
 package br.com.pereiraeng.geo.objetos;
 
-import java.awt.Graphics2D;
-import java.awt.Point;
-
 import br.com.pereiraeng.geo.GeoCoordinate;
 import br.com.pereiraeng.math.geometry.Circle;
 
