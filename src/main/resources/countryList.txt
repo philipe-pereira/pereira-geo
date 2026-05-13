@@ -1,5 +1,5 @@
  Afghanistan	AF	AFG	004	ISO 3166-2:AF
- Åland Islands	AX	ALA	248	ISO 3166-2:AX
+ Ã…land Islands	AX	ALA	248	ISO 3166-2:AX
  Albania	AL	ALB	008	ISO 3166-2:AL
  Algeria	DZ	DZA	012	ISO 3166-2:DZ
  American Samoa	AS	ASM	016	ISO 3166-2:AS
@@ -52,10 +52,10 @@
  Congo, the Democratic Republic of the	CD	COD	180	ISO 3166-2:CD
  Cook Islands	CK	COK	184	ISO 3166-2:CK
  Costa Rica	CR	CRI	188	ISO 3166-2:CR
- Côte d'Ivoire	CI	CIV	384	ISO 3166-2:CI
+ CÃ´te d'Ivoire	CI	CIV	384	ISO 3166-2:CI
  Croatia	HR	HRV	191	ISO 3166-2:HR
  Cuba	CU	CUB	192	ISO 3166-2:CU
- Curaçao	CW	CUW	531	ISO 3166-2:CW
+ CuraÃ§ao	CW	CUW	531	ISO 3166-2:CW
  Cyprus	CY	CYP	196	ISO 3166-2:CY
  Czech Republic	CZ	CZE	203	ISO 3166-2:CZ
  Denmark	DK	DNK	208	ISO 3166-2:DK
@@ -178,11 +178,11 @@
  Portugal	PT	PRT	620	ISO 3166-2:PT
  Puerto Rico	PR	PRI	630	ISO 3166-2:PR
  Qatar	QA	QAT	634	ISO 3166-2:QA
- Réunion	RE	REU	638	ISO 3166-2:RE
+ RÃ©union	RE	REU	638	ISO 3166-2:RE
  Romania	RO	ROU	642	ISO 3166-2:RO
  Russian Federation	RU	RUS	643	ISO 3166-2:RU
  Rwanda	RW	RWA	646	ISO 3166-2:RW
- Saint Barthélemy	BL	BLM	652	ISO 3166-2:BL
+ Saint BarthÃ©lemy	BL	BLM	652	ISO 3166-2:BL
  Saint Helena, Ascension and Tristan da Cunha	SH	SHN	654	ISO 3166-2:SH
  Saint Kitts and Nevis	KN	KNA	659	ISO 3166-2:KN
  Saint Lucia	LC	LCA	662	ISO 3166-2:LC

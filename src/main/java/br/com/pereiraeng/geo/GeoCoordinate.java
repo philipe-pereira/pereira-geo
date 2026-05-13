@@ -3,9 +3,9 @@ package br.com.pereiraeng.geo;
 import java.awt.geom.Point2D;
 import java.util.Locale;
 
+import br.com.pereiraeng.core.ExtendedMath;
 import br.com.pereiraeng.math.Angle;
 import br.com.pereiraeng.math.geometry.Coordinate;
-import br.com.pereiraeng.core.ExtendedMath;
 
 /**
  * Classe dos objetos que representam uma coordenada polar
